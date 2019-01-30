@@ -1,0 +1,240 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head><!-- ODK Aggregate upload time: 2019-01-28T05:20:36.87Z on http://192.168.20.227:8080 -->
+    <h:title>Untitled Form</h:title>
+    <model>
+      <instance>
+        <data id="build_Untitled-Form_1548652707">
+          <meta>
+            <instanceID/>
+          </meta>
+          <Region/>
+          <Leshoz/>
+          <Lesnichestvo/>
+          <Kvartal/>
+          <Vydel/>
+          <Location_path/>
+          <Location_shape/>
+          <Photo/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="English">
+          <text id="/data/Region:label">
+            <value>Область</value>
+          </text>
+          <text id="/data/Region:option0">
+            <value>Чуйская</value>
+          </text>
+          <text id="/data/Region:option1">
+            <value>Иссык-Кульская</value>
+          </text>
+          <text id="/data/Region:option2">
+            <value>Таласская</value>
+          </text>
+          <text id="/data/Region:option3">
+            <value>Нарынская</value>
+          </text>
+          <text id="/data/Region:option4">
+            <value>Джалал-Абадская</value>
+          </text>
+          <text id="/data/Region:option5">
+            <value>Ошская</value>
+          </text>
+          <text id="/data/Region:option6">
+            <value>Баткенская</value>
+          </text>
+          <text id="/data/Leshoz:label">
+            <value>Лесхоз</value>
+          </text>
+          <text id="/data/Leshoz:hint">
+            <value></value>
+          </text>
+          <text id="/data/Leshoz:option0">
+            <value>Лесхоз 1</value>
+          </text>
+          <text id="/data/Leshoz:option1">
+            <value>Лесхоз 2 </value>
+          </text>
+          <text id="/data/Leshoz:option2">
+            <value>Лесхоз 3</value>
+          </text>
+          <text id="/data/Leshoz:option3">
+            <value>Лесхоз 4</value>
+          </text>
+          <text id="/data/Leshoz:option4">
+            <value>Лесхоз 5</value>
+          </text>
+          <text id="/data/Lesnichestvo:label">
+            <value>Лесничество</value>
+          </text>
+          <text id="/data/Lesnichestvo:hint">
+            <value></value>
+          </text>
+          <text id="/data/Lesnichestvo:option0">
+            <value>Лесничество 1</value>
+          </text>
+          <text id="/data/Lesnichestvo:option1">
+            <value>Лесничество 2</value>
+          </text>
+          <text id="/data/Lesnichestvo:option2">
+            <value>Лесничество</value>
+          </text>
+          <text id="/data/Kvartal:label">
+            <value>Квартал</value>
+          </text>
+          <text id="/data/Kvartal:option0">
+            <value>Квартал 1</value>
+          </text>
+          <text id="/data/Kvartal:option1">
+            <value>Квартал 2</value>
+          </text>
+          <text id="/data/Kvartal:option2">
+            <value>Квартал 3</value>
+          </text>
+          <text id="/data/Vydel:label">
+            <value>Выдел</value>
+          </text>
+          <text id="/data/Vydel:hint">
+            <value></value>
+          </text>
+          <text id="/data/Vydel:option0">
+            <value>Выдел 1</value>
+          </text>
+          <text id="/data/Vydel:option1">
+            <value>Выдел 2</value>
+          </text>
+          <text id="/data/Vydel:option2">
+            <value>Выдел 3</value>
+          </text>
+          <text id="/data/Location_path:label">
+            <value>Location_path</value>
+          </text>
+          <text id="/data/Location_shape:label">
+            <value>Location_shape</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/Region" type="select1"/>
+      <bind nodeset="/data/Leshoz" type="select1"/>
+      <bind nodeset="/data/Lesnichestvo" type="select1"/>
+      <bind nodeset="/data/Kvartal" type="select1"/>
+      <bind nodeset="/data/Vydel" type="select1"/>
+      <bind nodeset="/data/Location_path" type="geotrace"/>
+      <bind nodeset="/data/Location_shape" type="geoshape"/>
+      <bind nodeset="/data/Photo" type="binary"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 ref="/data/Region">
+      <label ref="jr:itext('/data/Region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/Region:option0')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Region:option1')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Region:option2')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Region:option3')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Region:option4')"/>
+        <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Region:option5')"/>
+        <value>6</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Region:option6')"/>
+        <value>7</value>
+      </item>
+    </select1>
+    <select1 ref="/data/Leshoz">
+      <label ref="jr:itext('/data/Leshoz:label')"/>
+      <hint ref="jr:itext('/data/Leshoz:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/Leshoz:option0')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Leshoz:option1')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Leshoz:option2')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Leshoz:option3')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Leshoz:option4')"/>
+        <value>5</value>
+      </item>
+    </select1>
+    <select1 ref="/data/Lesnichestvo">
+      <label ref="jr:itext('/data/Lesnichestvo:label')"/>
+      <hint ref="jr:itext('/data/Lesnichestvo:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/Lesnichestvo:option0')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Lesnichestvo:option1')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Lesnichestvo:option2')"/>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 ref="/data/Kvartal">
+      <label ref="jr:itext('/data/Kvartal:label')"/>
+      <item>
+        <label ref="jr:itext('/data/Kvartal:option0')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Kvartal:option1')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Kvartal:option2')"/>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 ref="/data/Vydel">
+      <label ref="jr:itext('/data/Vydel:label')"/>
+      <hint ref="jr:itext('/data/Vydel:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/Vydel:option0')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Vydel:option1')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Vydel:option2')"/>
+        <value>3</value>
+      </item>
+    </select1>
+    <input ref="/data/Location_path">
+      <label ref="jr:itext('/data/Location_path:label')"/>
+    </input>
+    <input ref="/data/Location_shape">
+      <label ref="jr:itext('/data/Location_shape:label')"/>
+    </input>
+    <upload ref="/data/Photo" mediatype="image/*">
+    </upload>
+  </h:body>
+</h:html>
