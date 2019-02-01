@@ -76,7 +76,8 @@ class App extends Component {
           '<label ref=\"jr:itext(\'/data/Trees_dataName:option' +
           index +
           '\')"/>\n      <value>' +
-          elem +
+          'tree_' +
+          index +
           "</value>\n    </item>";
         return newElem;
       });

@@ -335,223 +335,223 @@
     </select>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option0')"/>
-      <value>Орешники коротконожковые</value>
+      <value>tree_0</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option1')"/>
-      <value>Орешники с дополнительным увлажнением</value>
+      <value>tree_1</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option2')"/>
-      <value>Орешники елово-пихтовые</value>
+      <value>tree_2</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option3')"/>
-      <value>Орешники боярышниковые</value>
+      <value>tree_3</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option4')"/>
-      <value>Орешники кленово-яблоневые</value>
+      <value>tree_4</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option5')"/>
-      <value>Орешники паркового характера</value>
+      <value>tree_5</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option6')"/>
-      <value>Фисташники высокотравно-злаковые</value>
+      <value>tree_6</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option7')"/>
-      <value>Фисташники полынно-злаковые</value>
+      <value>tree_7</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option8')"/>
-      <value>Фисташники эродированных склонов и пестроцветных обножений</value>
+      <value>tree_8</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option9')"/>
-      <value>Миндальники высокотравно-злаковые</value>
+      <value>tree_9</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option10')"/>
-      <value>Миндальники на каменистых склонах</value>
+      <value>tree_10</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option11')"/>
-      <value>Яблонники боярышниковые</value>
+      <value>tree_11</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option12')"/>
-      <value>Яблонники кленовые</value>
+      <value>tree_12</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option13')"/>
-      <value>Яблонники паркового характера</value>
+      <value>tree_13</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option14')"/>
-      <value>Кленовники ореховые</value>
+      <value>tree_14</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option15')"/>
-      <value>Кленовники яблоневые</value>
+      <value>tree_15</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option16')"/>
-      <value>Кленовники  на водоразделах и крутых склонах</value>
+      <value>tree_16</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option17')"/>
-      <value>Кленовники на осыпях</value>
+      <value>tree_17</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option18')"/>
-      <value>Боярышниковые леса на плодородных почвах</value>
+      <value>tree_18</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option19')"/>
-      <value>Боярышники яблоневые</value>
+      <value>tree_19</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option20')"/>
-      <value>Боярышники фисташковые низкогорий</value>
+      <value>tree_20</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option21')"/>
-      <value>Боярышниково-каркасовые редколесья на осыпях</value>
+      <value>tree_21</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option22')"/>
-      <value>Боярышники сухих местообитаний</value>
+      <value>tree_22</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option23')"/>
-      <value>Арчевники стланиковые</value>
+      <value>tree_23</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option24')"/>
-      <value>Арчевники (увлажненные) с сочными травами</value>
+      <value>tree_24</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option25')"/>
-      <value>Арчевники (сухие) с низкотравием</value>
+      <value>tree_25</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option26')"/>
-      <value>Арчевники прирусловых долин</value>
+      <value>tree_26</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option27')"/>
-      <value>Арчевники (открытые) кустарниковые</value>
+      <value>tree_27</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option28')"/>
-      <value>Арчевники на конусах выноса и осыпях</value>
+      <value>tree_28</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option29')"/>
-      <value>Арчевники скальные</value>
+      <value>tree_29</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option30')"/>
-      <value>Ельники увлажненные с высокотравьем</value>
+      <value>tree_30</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option31')"/>
-      <value>Ельники на высокогорьях</value>
+      <value>tree_31</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option32')"/>
-      <value>Ельники моховые</value>
+      <value>tree_32</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option33')"/>
-      <value>Ельники рябиновые</value>
+      <value>tree_33</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option34')"/>
-      <value>Ельники сухие с низкотравием</value>
+      <value>tree_34</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option35')"/>
-      <value>Ельники прирусловые</value>
+      <value>tree_35</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option36')"/>
-      <value>Ельники открытые кустарниковые</value>
+      <value>tree_36</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option37')"/>
-      <value>Ельники арчевые</value>
+      <value>tree_37</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option38')"/>
-      <value>Ельники скальные</value>
+      <value>tree_38</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option39')"/>
-      <value>Пихтарники еловые с дополнительным увлажнением</value>
+      <value>tree_39</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option40')"/>
-      <value>Пихтарники моховые</value>
+      <value>tree_40</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option41')"/>
-      <value>Пихтарники еловые смешанные с лиственными породами</value>
+      <value>tree_41</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option42')"/>
-      <value>Пихтарники еловые кустарниковые</value>
+      <value>tree_42</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option43')"/>
-      <value>Пихтарники еловые прирусловые</value>
+      <value>tree_43</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option44')"/>
-      <value>Пихтарники  еловые каменистых склонов</value>
+      <value>tree_44</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option45')"/>
-      <value>Облепишники</value>
+      <value>tree_45</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option46')"/>
-      <value>Ивняки разнотравные</value>
+      <value>tree_46</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option47')"/>
-      <value>Тополевники</value>
+      <value>tree_47</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option48')"/>
-      <value>Заросли лоха по бортам речных долин</value>
+      <value>tree_48</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option49')"/>
-      <value>Боярышники березово-облепиховые</value>
+      <value>tree_49</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option50')"/>
-      <value>Березняки родниковые</value>
+      <value>tree_50</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option51')"/>
-      <value>Смешанно-древесные пойменные леса долин рек и временных водотоков</value>
+      <value>tree_51</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option52')"/>
-      <value>Заросли кустарников на сухих террасах пойм</value>
+      <value>tree_52</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option53')"/>
-      <value>Кустарниковые заросли горных склонов</value>
+      <value>tree_53</value>
     </item>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option54')"/>
-      <value>Другие древесные породы</value>
+      <value>tree_54</value>
     </item>
     <input ref="/data/Location_path_dataName">
       <label ref="jr:itext('/data/Location_path_dataName:label')"/>
