@@ -19,11 +19,13 @@ class App extends Component {
       treesDB: [],
       treesDBArray: [],
       treesDBArray2: [],
-      currentArray: []
+      currentArray: [],
+      currentXML: ''
     };
     this.getResult = this.getResult.bind(this);
     this.refineResult = this.refineResult.bind(this);
     this.mergeTrees = this.mergeTrees.bind(this);
+    this.writeResult = this.writeResult.bind(this);
   }
 
   componentDidMount() {
@@ -73,7 +75,7 @@ class App extends Component {
       const mergeTrees5 = this.state.treesDB.map((elem, index, array) => {
         const newElem =
           '<item>\n'+
-          '<label ref=\"jr:itext(\'/data/Trees_dataName:option' +
+          '<label ref="jr:itext(\'/data/Trees_dataName:option' +
           index +
           '\')"/>\n      <value>' +
           'tree_' +
@@ -105,13 +107,14 @@ class App extends Component {
     //   return array1;
     // })
     const array1 = array.splice(array.indexOf("          <text id=\"/data/Trees_dataName:label\">")+3, 0, this.state.treesDBArray);
-    const array2 = array.splice(array.indexOf("    <select ref=\"/data/Trees_dataName\">")+3, 0, this.state.treesDBArray2);
+    const array2 = array.splice(array.indexOf("    <select ref=\"/data/Trees_dataName\">")+2, 0, this.state.treesDBArray2);
     // console.log(array.indexOf('<text id="/data/Trees_dataName:label">')+3);
     const tempTrees = array.join('\n');
-    const tempTrees2 = tempTrees.replace(/<\/text>,/g, '<\/text>\n').replace(/<\/item>,/g, '<\/item>\n');
+    const tempTrees2 = tempTrees.replace(/<\/text>,/g, '</text>\n').replace(/<\/item>,/g, '</item>\n');
     // const tempTrees3 = tempTrees2.replace(/<\/item>,/g, '<\/item>\n');
     const tempTreesArray = tempTrees2.split('\n');
-    this.setState({ currentArray: tempTreesArray })
+    this.setState({ currentArray: tempTreesArray, currentXML: tempTrees2 }, () => this.writeResult());
+
     console.log(tempTrees2)
   };
 
@@ -130,6 +133,43 @@ class App extends Component {
       console.error(error);
     }
   };
+
+  // class MyApp extends React.Component {
+  //   _downloadTxtFile = () => {
+  //     var element = document.createElement("a");
+  //     var file = new Blob([document.getElementById('myInput').value], {type: 'text/plain'});
+  //     element.href = URL.createObjectURL(file);
+  //     element.download = "myFile.txt";
+  //     element.click();
+  //   }
+    
+  //   render() {
+  //     return (
+  //       <div>
+  //         <input id="myInput" />
+  //         <button onClick={this._downloadTxtFile}>Download txt</button>
+  //       </div>
+  //     );
+  //   }
+  // }
+
+
+    writeResult = () => {
+      var data = new Blob([this.state.currentXML], {type: 'text/plain'});
+      var csvURL = window.URL.createObjectURL(data);
+      const tempLink = document.createElement('a');
+      tempLink.href = csvURL;
+      tempLink.setAttribute('download', 'filename.xml');
+      tempLink.click();
+    }
+  // writeResult = async () => {
+  //   try {
+  //     // const form = axios.get('http://192.168.20.227:8080/www/formXml?formId=build_Untitled-Form_1548652707');
+  //     await axios.post("./newForm.xml", this.state.currentXML);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   refineResult() {
     const xml = this.state.xml;

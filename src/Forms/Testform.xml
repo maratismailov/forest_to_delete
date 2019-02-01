@@ -332,7 +332,6 @@
     </input>
     <select ref="/data/Trees_dataName">
       <label ref="jr:itext('/data/Trees_dataName:label')"/>
-    </select>
 <item>
 <label ref="jr:itext('/data/Trees_dataName:option0')"/>
       <value>tree_0</value>
@@ -553,6 +552,7 @@
 <label ref="jr:itext('/data/Trees_dataName:option54')"/>
       <value>tree_54</value>
     </item>
+    </select>
     <input ref="/data/Location_path_dataName">
       <label ref="jr:itext('/data/Location_path_dataName:label')"/>
     </input>

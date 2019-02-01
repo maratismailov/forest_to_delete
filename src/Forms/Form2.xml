@@ -32,48 +32,6 @@
           <text id="/data/Region_dataname:option2">
             <value>Таласская</value>
           </text>
-          <text id="/data/Region_dataname:option3">
-            <value>Нарынская</value>
-          </text>
-          <text id="/data/Region_dataname:option4">
-            <value>Джалал-Абадская</value>
-          </text>
-          <text id="/data/Region_dataname:option5">
-            <value>Ошская</value>
-          </text>
-          <text id="/data/Region_dataname:option6">
-            <value>Баткенская</value>
-          </text>
-          <text id="/data/Leshoz_dataname:label">
-            <value>Лесхоз_label</value>
-          </text>
-          <text id="/data/Leshoz_dataname:hint">
-            <value></value>
-          </text>
-          <text id="/data/Leshoz_dataname:option0">
-            <value>Лесхоз 1</value>
-          </text>
-          <text id="/data/Leshoz_dataname:option1">
-            <value>Лесхоз 2 </value>
-          </text>
-          <text id="/data/Leshoz_dataname:option2">
-            <value>Лесхоз 3</value>
-          </text>
-          <text id="/data/Leshoz_dataname:option3">
-            <value>Лесхоз 4</value>
-          </text>
-          <text id="/data/Leshoz_dataname:option4">
-            <value>Лесхоз 5</value>
-          </text>
-          <text id="/data/Lesnichestvo_dataName:label">
-            <value>Лесничество_label</value>
-          </text>
-          <text id="/data/Kvartal_dataName:label">
-            <value>Квартал_label</value>
-          </text>
-          <text id="/data/Vydel_dataName:label">
-            <value>Выдел_label</value>
-          </text>
           <text id="/data/Trees_dataName:label">
             <value>Деревья_label</value>
           </text>
@@ -93,10 +51,6 @@
       </itext>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
       <bind nodeset="/data/Region_dataname" type="select1"/>
-      <bind nodeset="/data/Leshoz_dataname" type="select1"/>
-      <bind nodeset="/data/Lesnichestvo_dataName" type="string"/>
-      <bind nodeset="/data/Kvartal_dataName" type="string"/>
-      <bind nodeset="/data/Vydel_dataName" type="string"/>
       <bind nodeset="/data/Trees_dataName" type="select"/>
       <bind nodeset="/data/Location_path_dataName" type="geotrace"/>
       <bind nodeset="/data/Location_shape_dataName" type="geoshape"/>
@@ -114,60 +68,7 @@
         <label ref="jr:itext('/data/Region_dataname:option1')"/>
         <value>reg_issyk</value>
       </item>
-      <item>
-        <label ref="jr:itext('/data/Region_dataname:option2')"/>
-        <value>reg_talas</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/Region_dataname:option3')"/>
-        <value>reg_naryn</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/Region_dataname:option4')"/>
-        <value>reg_jalal</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/Region_dataname:option5')"/>
-        <value>reg_osh</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/Region_dataname:option6')"/>
-        <value>reg_batken</value>
-      </item>
     </select1>
-    <select1 ref="/data/Leshoz_dataname">
-      <label ref="jr:itext('/data/Leshoz_dataname:label')"/>
-      <hint ref="jr:itext('/data/Leshoz_dataname:hint')"/>
-      <item>
-        <label ref="jr:itext('/data/Leshoz_dataname:option0')"/>
-        <value>leshoz_1</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/Leshoz_dataname:option1')"/>
-        <value>leshoz_2</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/Leshoz_dataname:option2')"/>
-        <value>leshoz_3</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/Leshoz_dataname:option3')"/>
-        <value>leshoz_4</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/Leshoz_dataname:option4')"/>
-        <value>leshoz_5</value>
-      </item>
-    </select1>
-    <input ref="/data/Lesnichestvo_dataName">
-      <label ref="jr:itext('/data/Lesnichestvo_dataName:label')"/>
-    </input>
-    <input ref="/data/Kvartal_dataName">
-      <label ref="jr:itext('/data/Kvartal_dataName:label')"/>
-    </input>
-    <input ref="/data/Vydel_dataName">
-      <label ref="jr:itext('/data/Vydel_dataName:label')"/>
-    </input>
     <select ref="/data/Trees_dataName">
       <label ref="jr:itext('/data/Trees_dataName:label')"/>
       <item>
