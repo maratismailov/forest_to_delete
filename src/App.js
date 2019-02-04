@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-
 import "./App.css";
-
 import Region from "./components/Region";
 import Trees from "./components/Trees";
-// import { timingSafeEqual } from "crypto";
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +17,7 @@ class App extends Component {
       treesDBArray: [],
       treesDBArray2: [],
       currentArray: [],
-      currentXML: ''
+      currentXML: ""
     };
     this.getResult = this.getResult.bind(this);
     this.refineResult = this.refineResult.bind(this);
@@ -29,14 +26,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // this.getResult();
     this.getTrees();
   }
 
   getTrees = async () => {
     try {
       await this.getResult();
-      console.log("object");
       const array1 = this.state.xml.split("\n");
       const mergeTrees = array1.map((elem, index, array) => {
         if (elem.includes('<text id="/data/Trees_dataName:option0">')) {
@@ -59,10 +54,6 @@ class App extends Component {
         if (elem.length >= 1) return elem;
       });
 
-      // var list = ["foo", "bar"];
-      // list.splice( 1, 0, "baz"); // at index position 1, remove 0 elements, then add "baz" to that position
-      // element "bar" will now automatically be moved to index position 2
-      // ["foo", "baz", "bar"] // result
       const mergeTrees4 = this.state.treesDB.map((elem, index, array) => {
         const newElem =
           '<text id="/data/Trees_dataName:option' +
@@ -74,24 +65,23 @@ class App extends Component {
       });
       const mergeTrees5 = this.state.treesDB.map((elem, index, array) => {
         const newElem =
-          '<item>\n'+
-          '<label ref="jr:itext(\'/data/Trees_dataName:option' +
+          "<item>\n" +
+          "<label ref=\"jr:itext('/data/Trees_dataName:option" +
           index +
-          '\')"/>\n      <value>' +
-          'tree_' +
+          "')\"/>\n      <value>" +
+          "tree_" +
           index +
           "</value>\n    </item>";
         return newElem;
       });
 
-      //     var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-      // var removed = myFish.splice(2, 0, 'drum');
-
-      // myFish равен ["angel", "clown", "drum", "mandarin", "sturgeon"]
-      // removed равен [], ничего не удалено
-
-      this.setState({ currentArray: mergeTrees3, treesDBArray: mergeTrees4, treesDBArray2: mergeTrees5 }, () =>
-        this.refineResult()
+      this.setState(
+        {
+          currentArray: mergeTrees3,
+          treesDBArray: mergeTrees4,
+          treesDBArray2: mergeTrees5
+        },
+        () => this.refineResult()
       );
     } catch (error) {
       console.error(error);
@@ -99,23 +89,29 @@ class App extends Component {
   };
 
   mergeTrees = () => {
-    console.log('object')
+    console.log("object");
     const array = this.state.currentArray;
-    // const array1 = this.state.treesDBArray.map((elem, index, array) => {
-    //   const currentArray = this.state.currentArray;
-    //   const array1 = currentArray.splice(currentArray.indexOf("          <text id=\"/data/Trees_dataName:label\">")+3+index, 0, elem);
-    //   return array1;
-    // })
-    const array1 = array.splice(array.indexOf("          <text id=\"/data/Trees_dataName:label\">")+3, 0, this.state.treesDBArray);
-    const array2 = array.splice(array.indexOf("    <select ref=\"/data/Trees_dataName\">")+2, 0, this.state.treesDBArray2);
-    // console.log(array.indexOf('<text id="/data/Trees_dataName:label">')+3);
-    const tempTrees = array.join('\n');
-    const tempTrees2 = tempTrees.replace(/<\/text>,/g, '</text>\n').replace(/<\/item>,/g, '</item>\n');
-    // const tempTrees3 = tempTrees2.replace(/<\/item>,/g, '<\/item>\n');
-    const tempTreesArray = tempTrees2.split('\n');
-    this.setState({ currentArray: tempTreesArray, currentXML: tempTrees2 }, () => this.writeResult());
+    const array1 = array.splice(
+      array.indexOf('          <text id="/data/Trees_dataName:label">') + 3,
+      0,
+      this.state.treesDBArray
+    );
+    const array2 = array.splice(
+      array.indexOf('    <select ref="/data/Trees_dataName">') + 2,
+      0,
+      this.state.treesDBArray2
+    );
+    const tempTrees = array.join("\n");
+    const tempTrees2 = tempTrees
+      .replace(/<\/text>,/g, "</text>\n")
+      .replace(/<\/item>,/g, "</item>\n");
+    const tempTreesArray = tempTrees2.split("\n");
+    this.setState(
+      { currentArray: tempTreesArray, currentXML: tempTrees2 },
+      () => this.writeResult()
+    );
 
-    console.log(tempTrees2)
+    console.log(tempTrees2);
   };
 
   getResult = async () => {
@@ -123,12 +119,12 @@ class App extends Component {
       // const form = axios.get('http://192.168.20.227:8080/www/formXml?formId=build_Untitled-Form_1548652707');
       const form = await axios.get(require("./Forms/Form.xml"));
       // const preTreesDB = await axios.get(require("./Forms/Trees.txt"));
-      const preTreesDB = await axios.get("http://localhost:8080/forest");
+      const preTreesDB = await axios.get("http://localhost:8080/foresttype/foresttype_ru");
       const treesDB2 = preTreesDB.data;
       const treesDB = treesDB2.split("splitPlace");
-      const treesDB3 = treesDB.filter( elem => {
+      const treesDB3 = treesDB.filter(elem => {
         if (elem.length > 0) return true;
-      })
+      });
       const form2 = form.data;
       this.setState({ xml: form2, treesDB: treesDB3 }, () =>
         this.refineResult()
@@ -138,42 +134,14 @@ class App extends Component {
     }
   };
 
-  // class MyApp extends React.Component {
-  //   _downloadTxtFile = () => {
-  //     var element = document.createElement("a");
-  //     var file = new Blob([document.getElementById('myInput').value], {type: 'text/plain'});
-  //     element.href = URL.createObjectURL(file);
-  //     element.download = "myFile.txt";
-  //     element.click();
-  //   }
-    
-  //   render() {
-  //     return (
-  //       <div>
-  //         <input id="myInput" />
-  //         <button onClick={this._downloadTxtFile}>Download txt</button>
-  //       </div>
-  //     );
-  //   }
-  // }
-
-
-    writeResult = () => {
-      var data = new Blob([this.state.currentXML], {type: 'text/plain'});
-      var csvURL = window.URL.createObjectURL(data);
-      const tempLink = document.createElement('a');
-      tempLink.href = csvURL;
-      tempLink.setAttribute('download', 'filename.xml');
-      tempLink.click();
-    }
-  // writeResult = async () => {
-  //   try {
-  //     // const form = axios.get('http://192.168.20.227:8080/www/formXml?formId=build_Untitled-Form_1548652707');
-  //     await axios.post("./newForm.xml", this.state.currentXML);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
+  writeResult = () => {
+    var data = new Blob([this.state.currentXML], { type: "text/plain" });
+    var csvURL = window.URL.createObjectURL(data);
+    const tempLink = document.createElement("a");
+    tempLink.href = csvURL;
+    tempLink.setAttribute("download", "filename.xml");
+    tempLink.click();
+  };
 
   refineResult() {
     const xml = this.state.xml;
@@ -214,7 +182,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.region);
     return (
       <div className="App">
         <div className="BlankForm">
