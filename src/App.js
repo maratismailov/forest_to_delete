@@ -122,11 +122,15 @@ class App extends Component {
     try {
       // const form = axios.get('http://192.168.20.227:8080/www/formXml?formId=build_Untitled-Form_1548652707');
       const form = await axios.get(require("./Forms/Form.xml"));
-      const preTreesDB = await axios.get(require("./Forms/Trees.txt"));
+      // const preTreesDB = await axios.get(require("./Forms/Trees.txt"));
+      const preTreesDB = await axios.get("http://localhost:8080/forest");
       const treesDB2 = preTreesDB.data;
-      const treesDB = treesDB2.split("\n");
+      const treesDB = treesDB2.split("splitPlace");
+      const treesDB3 = treesDB.filter( elem => {
+        if (elem.length > 0) return true;
+      })
       const form2 = form.data;
-      this.setState({ xml: form2, treesDB: treesDB }, () =>
+      this.setState({ xml: form2, treesDB: treesDB3 }, () =>
         this.refineResult()
       );
     } catch (error) {
